@@ -1,0 +1,238 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "35789378-d010-45a3-ba02-54aef0cf030a",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":4,\"title\":\"test2\",\"description\":\"test\",\"completed\":true,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":5,\"title\":\"Dr.\",\"description\":\"Temporibus qui alias tempora qui nostrum aspernatur illum. Amet nemo ea similique error quis.\",\"completed\":false,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":6,\"title\":\"Mrs.\",\"description\":\"Perferendis magnam nam fuga assumenda officiis tempore. Rerum quia id culpa quia. Consequatur praesentium quo quia iusto animi. Veritatis necessitatibus atque aliquid sunt ipsam accusamus.\",\"completed\":false,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":7,\"title\":\"Mr.\",\"description\":\"Voluptatum ab eligendi corporis cum porro et et. Non sed illo voluptas non. Itaque voluptatem aut est dicta soluta dolor. Accusantium qui corporis at nobis. Tempora quae nisi ab totam quae eligendi.\",\"completed\":false,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":8,\"title\":\"test2\",\"description\":\"test\",\"completed\":true,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":9,\"title\":\"test2\",\"description\":\"test\",\"completed\":true,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":10,\"title\":\"Mr.\",\"description\":\"Nobis qui veniam nulla similique harum. Nostrum enim dolor consectetur mollitia voluptates voluptas ab.\",\"completed\":false,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":11,\"title\":\"Mr.\",\"description\":\"Sint ducimus sit dolorum itaque asperiores. Ut quia excepturi vero. Quis fuga id odit qui.\",\"completed\":false,\"user\":{\"id\":2,\"name\":\"Teee\"}},{\"id\":12,\"title\":\"Mr.\",\"description\":\"Ad et natus temporibus aperiam sunt. Odio asperiores tempore quibusdam ex est molestiae sunt. Nihil impedit perferendis recusandae non laboriosam eos. Rerum ratione aut quia.\",\"completed\":false,\"user\":{\"id\":2,\"name\":\"Teee\"}}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"kkhazckawpleiljtx\",\"description\":\"Illo eaque voluptatem tenetur optio.\",\"completed\":true}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/tasks\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "dolorem",
+                                    "description": "The ID of the task."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"Server Error\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/tasks\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "fugiat",
+                                    "description": "The ID of the task."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"oijxv\",\"description\":\"Quis illum pariatur ut.\",\"completed\":true}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/tasks\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "est",
+                                    "description": "The ID of the task."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

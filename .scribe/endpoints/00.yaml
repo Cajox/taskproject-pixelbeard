@@ -1,0 +1,273 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/tasks
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":4,"title":"test2","description":"test","completed":true,"user":{"id":2,"name":"Teee"}},{"id":5,"title":"Dr.","description":"Temporibus qui alias tempora qui nostrum aspernatur illum. Amet nemo ea similique error quis.","completed":false,"user":{"id":2,"name":"Teee"}},{"id":6,"title":"Mrs.","description":"Perferendis magnam nam fuga assumenda officiis tempore. Rerum quia id culpa quia. Consequatur praesentium quo quia iusto animi. Veritatis necessitatibus atque aliquid sunt ipsam accusamus.","completed":false,"user":{"id":2,"name":"Teee"}},{"id":7,"title":"Mr.","description":"Voluptatum ab eligendi corporis cum porro et et. Non sed illo voluptas non. Itaque voluptatem aut est dicta soluta dolor. Accusantium qui corporis at nobis. Tempora quae nisi ab totam quae eligendi.","completed":false,"user":{"id":2,"name":"Teee"}},{"id":8,"title":"test2","description":"test","completed":true,"user":{"id":2,"name":"Teee"}},{"id":9,"title":"test2","description":"test","completed":true,"user":{"id":2,"name":"Teee"}},{"id":10,"title":"Mr.","description":"Nobis qui veniam nulla similique harum. Nostrum enim dolor consectetur mollitia voluptates voluptas ab.","completed":false,"user":{"id":2,"name":"Teee"}},{"id":11,"title":"Mr.","description":"Sint ducimus sit dolorum itaque asperiores. Ut quia excepturi vero. Quis fuga id odit qui.","completed":false,"user":{"id":2,"name":"Teee"}},{"id":12,"title":"Mr.","description":"Ad et natus temporibus aperiam sunt. Odio asperiores tempore quibusdam ex est molestiae sunt. Nihil impedit perferendis recusandae non laboriosam eos. Rerum ratione aut quia.","completed":false,"user":{"id":2,"name":"Teee"}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/tasks
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: kkhazckawpleiljtx
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Illo eaque voluptatem tenetur optio.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      completed:
+        name: completed
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      title: kkhazckawpleiljtx
+      description: 'Illo eaque voluptatem tenetur optio.'
+      completed: true
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/tasks/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the task.'
+        required: true
+        example: dolorem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: dolorem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/tasks/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the task.'
+        required: true
+        example: fugiat
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: fugiat
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'This field is required when none of <code>description</code> and <code>completed</code> are present. Must not be greater than 255 characters.'
+        required: false
+        example: oijxv
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      description:
+        name: description
+        description: 'This field is required when none of <code>title</code> and <code>completed</code> are present.'
+        required: false
+        example: 'Quis illum pariatur ut.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      completed:
+        name: completed
+        description: 'This field is required when none of <code>title</code> and <code>description</code> are present.'
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      title: oijxv
+      description: 'Quis illum pariatur ut.'
+      completed: true
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/tasks/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the task.'
+        required: true
+        example: est
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: est
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
